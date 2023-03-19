@@ -1,0 +1,14 @@
+#app {
+    max-width: 940px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.age {
+    color: #40739e;
+}
+
+.currentYear {
+    color: #c23616;
+}
