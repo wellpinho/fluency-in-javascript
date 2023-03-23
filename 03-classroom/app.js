@@ -150,4 +150,6 @@ já tem, mais 4;
 */
 const numbers = [3, 5, 7];
 numbers[1] += 4
+const name = 'wellpinho'
 // console.log(numbers[1] ** 3)
+console.log(name.includes('p'))
