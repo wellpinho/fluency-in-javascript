@@ -33,7 +33,7 @@ array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
 brazilianFoods[1] = 'Pão de Queijo';
-// console.log(brazilianFoods)
+// console.log(brazilianFoods[1])
 
 /*
 05 - Comente o console.log acima e:
@@ -75,7 +75,7 @@ const dogNames = maleDogNames.concat(femaleDogNames);
 - Utilize o método adequado para fazer isso;
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
-// console.log(dogNames.toString().split(',').join(', '));
+// console.log(dogNames.join(', '));
 
 /*
 08 - Comente o console.log acima e:
@@ -90,7 +90,7 @@ utilizando o método adequado para isso;
 agora é "Lilica".
 */
 dogNames.pop();
-// console.log('what?', dogNames[dogNames.length -1])
+// console.log(dogNames[dogNames.length - 1])
 
 /*
 09 - Comente o console.log acima e:
@@ -115,7 +115,7 @@ const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[
 - Utilize o método adequado para isso.
 */
 
-// console.log(initials.toString().toUpperCase().split(',').join(''));
+// console.log(initials.toLowerCase());
 
 /*
 11 - Comente o console.log acima e:
@@ -132,8 +132,8 @@ constante que você criou.
 
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
-const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[3].slice(2)}`;
-// console.log(dessert)
+const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[3].slice(2)}`.replace('n', 'd');
+// console.log(`A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
 
 
 /*
