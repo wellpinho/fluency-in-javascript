@@ -1,123 +1,153 @@
 /*
-  01
+01 - No index.html deste diretório (exercicio-03):
 
-  - Gere um novo array com apenas os números ímpares do array abaixo e exiba 
-    o novo array no console.
-
-  Dica: pesquise por remainder operator (%).
+- Declare uma marcação HTML básica;
+- Linke este arquivo, app.js;
+- Inicie o seu servidor local e abra o console do browser.
 */
-
-const randomNumbers = [10, 30, 15, 25, 50, 40, 5]
-const oddNumbers = randomNumbers.filter(number => number % 2 !== 0)
-
-console.log('oddNumbers', oddNumbers);
-/*
-  02
-
-  - Exiba no console quantos números abaixo de 501 o array abaixo possui.
-*/
-
-const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
-const totalNumbers = crazyNumbers.filter(number => number < 501);
-
-console.log(totalNumbers.length, totalNumbers);
-/*
-  03
-
-  - Gere um novo array com cada um dos números abaixo elevados ao quadrado e 
-    exiba o novo array no console.
-  
-  Dica: pesquise por exponentiation operator (**).
-*/
-
-const numbers = [5, 7, 3]
-const numberToSquare = numbers.map(number => number ** 2)
-
-console.log(numberToSquare);
 
 /*
-  04
-
-  - Utilizando o array abaixo, gere um novo array com apenas os filmes 
-    lançados antes do ano 2000;
-  - Exiba o novo array no console.
+02 - Armazene um array vazio em uma let "brazilianFoods";
 */
 
-const tarantinoMovies = [
-  { name: 'Bastardos inglórios', release: 2009 },
-  { name: 'Pulp Fiction', release: 1994 },
-  { name: 'Kill Bill: Volume 2', release: 2004 },
-  { name: 'Quatro Quartos', release: 1995 },
-  { name: 'Sin City', release: 2005 },
-  { name: 'Era uma Vez em... Hollywood', release: 2019 },
-  { name: 'Django Livre', release: 2012 },
-  { name: 'Cães de Aluguel', release: 1992 },
-  { name: 'À Prova de Morte', release: 2007 },
-  { name: 'Kill Bill: Volume 1', release: 2003 }
-]
-
-const moviesReleasedBeforeOf2000 = tarantinoMovies.filter(movie => {
-  if (movie.release < 2000) {
-    return movie
-  }
-})
-
-console.log(moviesReleasedBeforeOf2000)
+let brazilianFoods = [];
 
 /*
-  05
+03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
 
-  - Gere um novo array que contém apenas os nomes das séries abaixo;
-  - Exiba o novo array no console.    
+- Coxinha
+- null
+- Brigadeiro
+
+- Exiba a brazilianFoods no console.
 */
 
-const tvShows = [
-  { name: 'Breaking Bad', releaseYear: 2008 },
-  { name: 'Mr. Robot', releaseYear: 2015 },
-  { name: 'True Detective', releaseYear: 2014 },
-  { name: 'Hannibal', releaseYear: 2013 },
-  { name: 'The Handmaid\'s Tale', releaseYear: 2017 },
-  { name: 'House M.D.', releaseYear: 2004 },
-  { name: 'Watchmen', releaseYear: 2019 }
-]
-
-const movieNames = tvShows.map(movie => movie.name);
-console.log(movieNames);
+brazilianFoods.push('Coxinha', null, 'Brigadeiro')
+// console.log(brazilianFoods)
 
 /*
-  06
+04 - Comente o console.log acima e:
 
-  - Exiba no console uma lista dos nomes dos jogos do array abaixo;
-  - A lista deve ter a formatação exemplificada abaixo do array, considerando 
-    inclusive o traço e o espaço antes de cada nome.
-  
-  Dica: para quebrar linha, você pode usar dentro da string o caractere 
-  especial \n.
+- Através de uma reatribuição de valor, faça com que o 2º item do  
+array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
+- Exiba apenas o 2º item desse array no console.
 */
-
-const cart = [
-  { name: 'Dark Souls III', price: 95.03 },
-  { name: 'Shadow of the Tomb Raider', price: 101.19 },
-  { name: 'Sekiro: Shadows Die Twice', price: 179.99 },
-  { name: 'Resident Evil 2', price: 119.90 },
-  { name: 'Death Stranding', price: 149.99 }
-]
-const listNames = cart.map(cart => ` - ${cart.name}\n`);
-console.log(...listNames);
+brazilianFoods[1] = 'Pão de Queijo';
+// console.log(brazilianFoods)
 
 /*
-- Nome 1
-- Nome 2
-- Nome 3
+05 - Comente o console.log acima e:
 
-Obs: 👆🏻 o objetivo do exercício é gerar a string acima. 
-
-A string deve ter exatamente a formatação acima (com traço, quebra de linha, 
-e cada item em uma linha). 
-
-console.log é apenas uma forma de você visualizar a string que você está 
-gerando. Não é o objetivo final do exercício.
-
-O objetivo final NÃO É executar um console.log para cada nome. Mas sim gerar 
-uma única string que contém uma lista exatamente como o exemplo acima. 
+- Armazene em uma const "foodsInfo" a seguinte string: "Até aqui, o  
+array "brazilianFoods" possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1,  
+NOME_DO_ITEM_2 e NOME_DO_ITEM_3.";
+- Substitua "NUMERO_DE_ITENS" pelo valor correto, mas sem inserir o  
+número diretamente;
+- Substitua as palavras "NOME_DO_ITEM_X" pelas informações corretas,  
+mas sem digitar os nomes das comidas diretamente;
+- Exiba a foodsInfo no console.
 */
+const foodsInfo = `Até aqui, o  array "brazilianFoods" possui ${brazilianFoods.length} itens: ${brazilianFoods[0]}, ${brazilianFoods[1]} e ${brazilianFoods[2]}."`;
+// console.log(foodsInfo)
+
+/*
+06 - Comente o console.log acima e:
+
+- Armazene um array com os itens "Chico" e "Zeca" em uma const  
+"maleDogNames";
+- Agora, em uma const "femaleDogNames", armazene um array com os  
+itens "Lilica" e "Matilda";
+- Declare uma let "dogNames" que recebe a junção dos arrays  
+"maleDogNames" e "femaleDogNames";
+- Exiba a "dogNames" no console.
+*/
+const maleDogNames = ['Chico', 'Zeca'];
+const femaleDogNames = ['Lilica', 'Matilda'];
+const dogNames = maleDogNames.concat(femaleDogNames);
+// console.log(dogNames)
+
+
+/*
+07 - Comente o console.log acima e:
+
+- Exiba no console uma string com todos os itens do array  
+"dogNames" separados por vírgula e espaço em branco;
+- Utilize o método adequado para fazer isso;
+- O resultado deve ser: "nome1, nome2, nome3, nome4".
+*/
+// console.log(dogNames.toString().split(',').join(', '));
+
+/*
+08 - Comente o console.log acima e:
+
+- Exiba no console o último item do array "dogNames", mas de  
+forma que caso a quantidade de itens do array aumente ou diminua,  
+o último item continue sendo exibido;
+- Para testar essa lógica, na linha acima do console.log que  
+você acabou de escrever, remova o último item do array "dogNames"  
+utilizando o método adequado para isso;
+- O console deve continuar exibindo o último item do array, que  
+agora é "Lilica".
+*/
+dogNames.pop();
+// console.log('what?', dogNames[dogNames.length -1])
+
+/*
+09 - Comente o console.log acima e:
+
+- Adicione o item "Nina" no final do array "dogNames", utilizando  
+o método adequado para isso;
+- Agora, armazene em uma const "initials" uma template string com  
+apenas as letras iniciais dos nomes do array "dogNames";
+- Exemplo: ['Nala', 'Zé'] resultaria em uma string 'NZ';
+- Não digite as letras diretamente;
+- Exiba a "initials" no console.
+*/
+dogNames.push('Nina');
+const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}`;
+// console.log(initials);
+
+
+/*
+10 - Comente o console.log acima e:
+
+- Exiba a "initials" no console, mas com todas as letras minúsculas;
+- Utilize o método adequado para isso.
+*/
+
+// console.log(initials.toString().toUpperCase().split(',').join(''));
+
+/*
+11 - Comente o console.log acima e:
+
+- Declare uma const "dessert" e faça com que ela receba uma template  
+string que contém a parte "co" do 1º item do array "dogNames", a  
+parte "ca" do 2º item e a parte "na" do 4º item;
+- A string deve resultar na palavra 'cocana', que não deve ser  
+digitada diretamente;
+- No final da string, faça com que a letra "n" seja substituída por  
+"d", utilizando o método adequado para isso;
+- Exiba no console a string abaixo, substituindo "SOBREMESA" pela  
+constante que você criou.
+
+'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
+*/
+const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[3].slice(2)}`;
+// console.log(dessert)
+
+
+/*
+12 - Comente o console.log acima e:
+
+- Declare um array com os números 3, 5, e 7 e o armazene em uma let  
+"oddNumbers";
+- Exiba no console o resultado do 2º item do array elevado ao cubo. O  
+valor exibido deve ser 125;
+- Entre a declaração da "oddNumbers" e a exibição do 2º item do array  
+elevado ao cubo, faça o 2º item do array receber todo o valor que ele  
+já tem, mais 4;
+- Agora, o resultado exibido no console deve ser 729.
+*/
+const numbers = [3, 5, 7];
+numbers[1] += 4
+// console.log(numbers[1] ** 3)
