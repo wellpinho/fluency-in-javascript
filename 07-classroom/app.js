@@ -164,3 +164,9 @@ switch (a) {
 // } else {
 //   console.log('O valor de "a" é qualquer número, exceto 0 e 1')
 // }
+
+const doubleResult = (number) => {
+  return number * 2
+}
+
+console.log(doubleResult(3))
