@@ -5,7 +5,9 @@
     maiúsculas.
 */
 const title = document.querySelector('h1')
-title.style.textTransform = 'uppercase'
+// title.style.textTransform = 'uppercase' // ou podemos fazer assim tambem:
+title.textContent = title.textContent.toUpperCase()
+
 
 /*
   02
@@ -15,11 +17,9 @@ title.style.textTransform = 'uppercase'
 */
 
 const numbers = [ 53, 24, 3, 8, 1, 6, 57, 80, 77, 98, 55 ]
-const lis = document.querySelector('.numbers')
-
-numbers.forEach(number => {
-  lis.innerHTML += (`<li class="number">${number}</li>`)
-})
+const ul = document.querySelector('.numbers')
+const insertNumberToUl = number => ul.innerHTML += `<li class="number">${number}</li>`
+numbers.forEach(insertNumberToUl)
 
 /*
   03
@@ -29,12 +29,18 @@ numbers.forEach(number => {
     - Se o número é ímpar, exiba-o na cor "pink".
 */
 const li = document.querySelectorAll('.number')
-li.forEach(li => {
-  const num = li.textContent
-  if (num % 2 === 0) {
-    li.style = 'color: lightblue'
+const changeLiColor = li => {
+  const isEven = Number(li.textContent) % 2 === 0
+
+  if (isEven) {
+    li.style.color = 'blue'
+    return
   }
-})
+
+  li.style.color = 'red'
+}
+
+li.forEach(changeLiColor)
 
 
 /*
