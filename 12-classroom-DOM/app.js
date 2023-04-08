@@ -13,9 +13,12 @@ const getCatInfo = () => {
   let age = 3
   const color = 'Cinza'
 
-  return ({ name, age, color });
+  return { name, age, color };
 }
-console.log(`${getCatInfo().name} é um gato ${getCatInfo().color} de ${getCatInfo().age} anos.`)
+
+// destructure asign
+const { name, age, color } = getCatInfo();
+console.log(`${name} é um gato ${color} de ${age} anos.`)
 /*
   02
 
@@ -82,11 +85,19 @@ const dogs = [
   { name: 'Zé', age: 2, gender: 'Male', breed: 'Pug' },
   { name: 'Jade', age: 4, gender: 'Female', breed: 'Shiba inu' },
   { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
-  { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
+  { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' },
+  { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle2' }
 ]
 
+// find return first obj and stop when find in array
+// find deve ser suado quando queremos apenas um item do array
 const findObjZequinha = dogs.find(dog => dog.name === 'Zequinha');
 console.log(findObjZequinha)
+
+// filter return all obj and continue to end array
+// deve se rusado quando queremos todos os itens que coicidam no array
+const filterObjZequinha = dogs.find(dog => dog.name === 'Zequinha');
+console.log(filterObjZequinha)
 
 /*
   06
@@ -129,5 +140,5 @@ console.log(title)
     página, através da classe deles;
   - Exiba esse NodeList no console.
 */
-const list = document.querySelectorAll('list')
+const list = document.querySelectorAll('secondary-title')
 console.log(list)
