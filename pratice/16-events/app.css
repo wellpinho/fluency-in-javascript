@@ -1,0 +1,29 @@
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    max-width: 200px;
+    padding: 8px;
+    margin: 8px;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 216px;
+    border: none;
+    background-color: #941458;
+    color: #ddd;
+    padding: .5rem 1.5rem;
+    border-radius: .2rem;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: #941458;
+    color: #ddd;
+    text-decoration: line-through;
+}
