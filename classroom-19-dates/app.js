@@ -4,7 +4,7 @@ const present = new Date();
 const difference = present.getTime() - past.getTime();
 console.log(difference);
 
-const seconds = Math.round(difference / 1000); // 1000 milisecond is equal to 1 sec
+const seconds = Math.round(difference / 1000);
 console.log({ seconds });
 
 const minutes = Math.round(seconds / 60);
@@ -21,6 +21,11 @@ console.log({ months });
 
 const years = Math.round(months / 12);
 console.log({ years });
+
+
+
+
+
 
 /* TODO:
   converter um timestamp em obj de data
